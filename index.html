@@ -1,3 +1,4 @@
+<!--#region Doctype/html -->
 <!-- The declaration is not an HTML tag. It is an "information" to the browser about what document type to expect. -->
 <!-- ازین تگ استفاده کردم تا به مرورگر تایپ فایل خودمو معرفی کنم -->
 <!DOCTYPE html>
@@ -6,6 +7,8 @@
 <!-- ازین تگ استفاده کردم تا یک ریشه برای کد های خودم بسازم و مرجع آنان شود  -->
 <!-- we use rtl inside html tag to set the rotation of showing texts -->
 <html lang="en" dir="rtl">
+
+  <!-- #region header -->
   <!-- The <head> element is a container for metadata (data about data) and is placed between the <html> tag and the <body> tag.
   HTML metadata is data about the HTML document. Metadata is not displayed. -->
   <!-- ازین تگ استفاده میکنیم تا قوانین و لینک های مورد نظر رو به فایلمون انتقال بدیم و استفاده کنیم -->
@@ -14,14 +17,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacts</title>
   </head>
-
+  <!-- #endregion -->
+  <!-- #region body -->
   <!-- The <body> tag defines the document's body. -->
   <!-- از این تگ استفاده میکنیم تا بدنه کد و چیزی ک قرار است نمایش داده شود توسط کد هارا در چهارچوبی کد نویسی کنیم -->
   <body>
+    <!-- #region h1 -->
+    <!--  -->
     <!-- تگ اچ وان یک تگ هدر است و به مرورگر میفهماند که داستان اصلی این صفحه وب چیست -->
     <!-- این تگ را برای زیبایی و ویو صفحه بکار بردم -->
     <h1>افزودن مخاطبین</h1>
-
+    <!-- #endregion -->
+    <!-- #region form -->
     <!-- The <form> tag is used to create an HTML form for user input. -->
     <!-- از تگ فرم استفاده میکنیم تا بخشی برای گرفتن ورودی های کاربر ایجاد کنیم و یک سری مزایای خاص دارد که با ارزش هستند -->
     <form action="" id="contactForm">
@@ -67,7 +74,8 @@
       <!-- از این تگ استفاده کردم تا دکمه ای طراحی کنم تا بعد از گرفتن اطلاعات از کاربر عمل بعدی یعنی ذخیره و ارسال آن ها را انجام دهد -->
       <button type="button" id="contactButton">افزودن مخاطب</button>
     </form>
-
+    <!-- #endregion -->
+    <!-- #region button / script / link -->
     <!-- تگ ای ام جی برای قرار دادن یک عکس در صفحه به کار میرود -->
     <!-- اینجا با استفاده از دکمه و تگ عکس یک دکمه برای بستن صفحه ساخته ام -->
     <button type="button" id="closeButton">
@@ -81,5 +89,8 @@
     <!-- The <script> tag is used to embed a client-side script (JavaScript). -->
     <!-- این تگ را استفاده کردم تا فایل جاوتاسکریپتم را به اچ تی ام ال متصل کنم تا رفتار صفحه ام را مورد کنترل قرار بدم -->
     <script src="index.js"></script>
+    <!-- #endregion -->
   </body>
+  <!-- #endregion -->
 </html>
+<!-- #endregion -->
