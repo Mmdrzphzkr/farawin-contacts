@@ -41,29 +41,21 @@ contactName.onblur = function (e) {
 };
 
 // کنترل دکمه برای خاموش بودن تا زمان پر شدن فیلد ها و صرفا برای نشان دادن یک پیغام
-//اگر نام مخاطب قبلا ذخیره شده باشد پیامی مبنی بر قبلا ذخیره شده نشان میدهد
-//اگر مخاطب جدید باشد پیامی مبنی بر ذخیره شده نشان میدهد
-//اگر فیلد خالی باشد دکمه کار نمیکند
-contactButton.onclick = function (e) {
-  var names = ["محمدرضا", "علیرضا", "حسین", "علی"];
-  var userName = contactName.value;
+contactEditButton.onclick = function (e) {
+  var names = [];
   var phoneNumber = contactNumber.value;
   if (phoneNumber >= 0 || phoneNumber <= 9) {
     if (phoneNumber.length == 11) {
       if (!contactName.value == "") {
-        if (names.includes(userName)) {
-          alert("مخاطب قبلا ذخیره شده است .");
-          return true;
-        } else {
-          alert("مخاطب با موفقیت ذخیره شد .");
-        }
+        names.push(contactName.value);
+        alert("مخاطب با موفقیت ویرایش شد" + "  " + "(" + names + ")");
+        return true;
       }
     }
   } else {
     e.preventDefault();
   }
 };
-
 // از این تابع استفاده کرده ام تا با زدن دکمه مذکور صفحه اضافه کردن مخاطب به کل بسته شود
 closeButton.onclick = function (e) {
   window.close();
