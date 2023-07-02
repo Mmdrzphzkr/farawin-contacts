@@ -40,7 +40,23 @@ contactName.onblur = function (e) {
   }
 };
 
+// کنترل دکمه برای خاموش بودن تا زمان پر شدن فیلد ها و صرفا برای نشان دادن یک پیغام
+contactButton.onclick = function(e){
+  var phoneNumber = contactNumber.value;
+  if (phoneNumber >= 0 || phoneNumber <= 9) {
+    if (phoneNumber.length == 11) {
+      if(!contactName.value == ""){
+        alert("مخاطب با موفقیت ذخیره شد");
+        return true;
+      }
+    }
+  }else {
+      e.preventDefault();
+    }
+};
+
 // از این تابع استفاده کرده ام تا با زدن دکمه مذکور صفحه اضافه کردن مخاطب به کل بسته شود
 closeButton.onclick = function (e) {
   window.close();
 };
+
